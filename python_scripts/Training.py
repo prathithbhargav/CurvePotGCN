@@ -323,7 +323,7 @@ def calc_everything(device):
             
             data_initial = torch.tensor([[15]])
             
-            for data in train_loader:
+            for data in val_loader:
                 data_initial = torch.vstack((data_initial,data.y.reshape(-1,1)))
             data_initial = data_initial[1:,:].to(device)
             
